@@ -57,8 +57,9 @@ BOOL CllkwgApp::InitInstance()
 	SetRegistryKey(_T("应用程序向导生成的本地应用程序"));
 
 	CllkwgDlg dlg;
+	
+	//dlg.SetWindowPos(NU, 100, 100, 900, 600, SWP_NOMOVE);
 	m_pMainWnd = &dlg;
-	SetWindowPos(NULL,NULL, 0, 0, 200, 300, SWP_NOMOVE);
 	INT_PTR nResponse = dlg.DoModal();
 	if (nResponse == IDOK)
 	{

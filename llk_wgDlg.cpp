@@ -23,6 +23,7 @@ CllkwgDlg::CllkwgDlg(CWnd* pParent /*=nullptr*/)
 	, game_y(_T(""))*/
 {
 	m_hIcon = AfxGetApp()->LoadIcon(IDR_MAINFRAME);
+
 }
 
 void CllkwgDlg::DoDataExchange(CDataExchange* pDX)
@@ -49,10 +50,10 @@ BOOL CllkwgDlg::OnInitDialog()
 	//  执行此操作
 	SetIcon(m_hIcon, TRUE);			// 设置大图标
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
+	SetWindowPos(NULL, 300, 300, 600, 300, SWP_NOMOVE);
+	ShowWindow(SW_SHOW);
 
-	ShowWindow(SW_MAXIMIZE);
-
-	ShowWindow(SW_MINIMIZE);
+	//ShowWindow(SW_MINIMIZE);
 
 	// TODO: 在此添加额外的初始化代码
 
